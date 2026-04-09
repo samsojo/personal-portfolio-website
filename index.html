@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e82e607e06.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo"><span>S</span>am  <span>S</span>ojo.</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Employment History</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>BSc Computer Science Student</p>
+                <h1>Hi, I'm <span>Sam Sojo</span> <br>From Glasgow</h1>
+            </div>
+        </div>
+    </div>
+    <!-- - - - - - - - - - - - About - - - - - - - - - - -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/me.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a dedicated and driven 3rd-year BSc Computer Science student at the University of Aberdeen, with a strong passion for technology and innovation.
+                     I'm particularly interested in breaking into the FinTech industry, where I can combine my technical skills with my interest in finance to create impactful digital solutions.
+                     My goal is to continue developing both my technical and analytical abilities while gaining real-world experience that prepares me for a successful career in technology and finance.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span><u>2023-Present</u></span><br>B.C.s Computer Science at University of Aberdeen</li>
+                            <li><span><u>2018-2022</u></span><br>High School Diploma from St Andrews and St Brides High School</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <div class="skills-row">
+                        <ul>
+                            <li><span><u>Tools and Technologies</u></span><br>Python</li>
+                            <li>Java</li>
+                            <li>Github</li>
+                            <li>Agile (Scrum)</li>
+                            <li>SQL(phpMyAdmin)</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>MS Office</li>
+                            <li>Figma</li>
+                        </ul>
+                        <ul>
+                            <li><span><u>Interpersonal and Industry Skills</u></span><br>Emotional Intelligence</li>
+                            <li>Relationship Building</li>
+                            <li>Conflict Resolution</li>
+                            <li>Project Management</li>
+                            <li>Time Management</li>
+                            <li>Problem Solving</li>
+                            <li>Communication</li>
+                            <li>Teamwork</li>
+                            <li>Leadership</li>
+                            <li>Adaptability</li>
+                            <li>Empathy</li>
+                            <li>Volunteering</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <!-- - - - - - - - - - - - - - Employment History - - - - - - - - - - - - - - - - - -->
+
+   <div id="Employment-History">
+        <div class="container">
+            <h1 class="sub-title">Employment History</h1>
+            <div class="employment-history-list">
+                <div>
+                    <img src="images/clarks.jpeg">
+                    <h2>Sales Assistant</h2>
+                    <p>Delivered excellent customer service by providing tailored footwear advice and resolved customer queries efficiently by
+                    applying problem solving skills and clear communication, often under time pressure during busy trading periods ensuring a
+                    positive in-store experience for a diverse customer base.</p>
+                    <br>
+                    <p>Collaborated with a team to meet sales goals, adapt to new in-store systems, and support promotional rollouts,
+                    demonstrating flexibility and tech readiness in a dynamic environment.</p>
+                    <a href="https://www.clarksjobs.com/where-you-could-be-working/working-store">Learn more</a>
+                </div>
+                <div>
+                    <img src="images/mcdonalds.png">
+                    <h2>Restaurant Crew Member</h2>
+                    <p>Accurately managed transactions using the point-of-sale system, ensuring smooth handling of various payment methods
+                    and consistent order accuracy.</p>
+                    <br>
+                    <p>Communicated clearly and worked collaboratively in a high-pressure environment, strengthening problem-solving and
+                    teamwork skills essential in tech projects.</p>
+                    <a href="https://people.mcdonalds.co.uk/opportunities/restaurant/crew-member">Learn more</a>
+                </div>
+            </div>
+        </div>
+   </div>
+   <!-- - - - - - - - - - - - - - Technical Projects and Experience - - - - - - - - - - - - - - - -->
+
+   <div id="experience">
+        <div class="container">
+            <h1 class="sub-title">Technical Projects and Experience</h1>
+            <div class="experience-list">
+                <div class="work">
+                    <img src="images/experience-1.png" alt="">
+                    <div class="layer">
+                        <h3>Staff Workload Management System</h3>
+                        <p>Contributed to the UI/UX design and dashboard layout of a web-based Staﬀ Workload Management Tool to improve staﬀ
+                        eﬃciency and usability, worked as part of a six-member Agile team to design and prototype the tool using Figma
+                        and front-end technologies.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/experience-2.png" alt="">
+                    <div class="layer">
+                        <h3>Full Stack Engineer Career Path</h3>
+                        <p>Developing comprehensive skills across the stack, including front-end (HTML/CSS/JS) and back-end technologies (Node.js,
+                        Express.js). Mastering SQL for database management and data manipulation, a core requirement for interrogating large
+                        datasets.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/experience-3.png" alt="">
+                    <div class="layer">
+                        <h3>GDSC (Google Developer Student Club)</h3>
+                        <p>Gained practical technical skills through workshops, collaborative projects and community focused solutions enhancing
+                        coding and problem-solving abilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+   <!-- - - - - - - - - - - - - - - - - - -- - Contact - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>samksojo@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>07421363892</p>
+                    <div class="social-icons">
+                        <a href=https://www.linkedin.com/in/samsojo05><i class="fa-brands fa-square-linkedin"></i></a>
+                        <a href="https://github.com/samsojo"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                    <a href="images/Sam Sojo Internship CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Thank you for visiting my portfolio! I look forward to connecting with you. <i class="fa-solid fa-handshake"></i></p>
+        </div>
+    </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
