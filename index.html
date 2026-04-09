@@ -165,10 +165,10 @@
                     <a href="images/Sam Sojo Internship CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <form id="contact-form">
+                        <input type="text" name="from_name" placeholder="Your Name" required>
+                        <input type="email" name="from_email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
@@ -209,6 +209,37 @@
     }
 
 
+</script>
+
+<script>
+
+    document.getElementById("contact-form").addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const formData = {
+            from_name: this.from_name.value,
+            from_email: this.from_email.value,
+            message: this.message.value
+        };
+
+        try {
+            const response = await fetch("http://localhost:3000/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully!");
+                this.reset();
+            } else {
+                alert("Failed to send message. Please try again.");
+            }
+        } catch (error) {
+            alert("Failed to connect to server. Please try again.");
+        }
+    });
+    
 </script>
 
 </body>
