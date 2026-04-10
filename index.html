@@ -244,5 +244,76 @@
 
 </script>
 
+<!-- - - - - - - - - - - - - - - - - AI Chatbot - - - - - - - - - - - - - - - - - - -->
+
+<div id="chat-widget">
+    <div id="chat-header" onclick="toggleChat()">
+        <i class="fa-solid fa-robot"></i>
+        <span>Ask me about Sam</span>
+        <i class="fa-solid fa-chevron-down" id="chat-toggle-icon"></i>
+    </div>
+    <div id="chat-body">
+        <div id="chat-messages">
+            <div class="bot-message">Hi! I'm Sam's AI assistant. Ask me anything about Sam's skills, experience or education!</div>
+        </div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Ask a question...">
+            <button onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleChat() {
+        const body = document.getElementById('chat-body');
+        const icon = document.getElementById('chat-toggle-icon');
+        if (body.style.display === 'block') {
+            body.style.display = 'none';
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        } else {
+            body.style.display = 'block';
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        }
+    }
+
+    async function sendChatMessage() {
+        const input = document.getElementById('chat-input');
+        const messages = document.getElementById('chat-messages');
+        const message = input.value.trim();
+
+        if (!message) return;
+
+        messages.innerHTML += `<div class="user-message">${message}</div>`;
+        input.value = '';
+        messages.scrollTop = messages.scrollHeight;
+
+        messages.innerHTML += `<div class="bot-message" id="loading">Thinking...</div>`;
+        messages.scrollTop = messages.scrollHeight;
+
+        try {
+            const response = await fetch('https://personal-portfolio-backend-h90b.onrender.com/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message })
+            });
+
+            const data = await response.json();
+            document.getElementById('loading').remove();
+            messages.innerHTML += `<div class="bot-message">${data.reply}</div>`;
+        } catch (error) {
+            document.getElementById('loading').remove();
+            messages.innerHTML += `<div class="bot-message">Sorry, I'm having trouble connecting. Please try again!</div>`;
+        }
+
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    document.getElementById('chat-input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') sendChatMessage();
+    });
+</script>
+
 </body>
 </html>
